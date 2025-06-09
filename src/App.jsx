@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     <h1 className='text-5xl text-center text-bold mt-20'>
+     <h1 className='text-4xl text-center text-bold mt-20'>
       Humgman game
      </h1>
     </>
