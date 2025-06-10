@@ -1,14 +1,43 @@
 import React from 'react'
-
+import { useState,useEffect } from "react";
 const Keyboard = () => {
-    let letter = Array.from({length :26 },(_,i)=>String.fromCharCode(65+i))
-    console.log(letter)
+    let letters = Array.from({length :26 },(_,i)=>String.fromCharCode(65+i))
+    console.log(letters)
 
+    let rows= [
+      letters.slice(0,10),
+      letters.slice(10,19),
+      letters.slice(19,26)
+    ]
+
+    const [input, setinput] = useState();
+
+    let handleClick=()=>(
+      ew
+    )
     
   return (
-    <div>
-      <div className='border-2 border-black w-56 h-28 '>
+    <div className='relative '>
+      <div className='fixed bottom-10 border-2 border-black w-full h-56 '>
         
+          {rows.map((row , rowIndex)=>(
+            <div className='flex justify-center' key={rowIndex}>
+              {row.map((letter,index )=>{
+                
+                return(
+                  <button
+                  onClick={handleClick}
+                  className='text-3xl p-3 ' 
+                  key={index}>
+                    {letter}
+                  </button>
+                )
+                
+              })}
+            </div>
+            
+          ))}
+       
       </div>
     </div>
   )
