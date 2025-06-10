@@ -7,7 +7,9 @@ const Keyboard = () => {
     
   return (
     <div>
-      
+      <div className='border-2 border-black w-56 h-28 '>
+        
+      </div>
     </div>
   )
 }

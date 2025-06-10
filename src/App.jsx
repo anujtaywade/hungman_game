@@ -12,13 +12,14 @@ useEffect(() => {
 
   return (
     <>
-    <Keyboard/>
+    
      <h1 className='text-4xl text-center font-semibold mt-20'>
       Hungman game
      </h1>
      <h1>
       The random word is {word}
      </h1>
+     <Keyboard/>
     </>
   )
 }
