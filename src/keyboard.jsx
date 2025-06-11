@@ -11,10 +11,6 @@ const Keyboard = () => {
     ]
 
     const [input, setinput] = useState();
-
-    let handleClick=()=>(
-      ew
-    )
     
   return (
     <div className='relative '>
@@ -26,7 +22,7 @@ const Keyboard = () => {
                 
                 return(
                   <button
-                  onClick={handleClick}
+                
                   className='text-3xl p-3 ' 
                   key={index}>
                     {letter}

@@ -2,6 +2,7 @@ import { generate, count } from "random-words";
 import { useState ,useEffect} from 'react';
 import './App.css'
 import Keyboard from './keyboard'
+import HungmanPotrait from "./hungmanPotrait";
 function App() {
 const [word, setword] = useState('');
 
@@ -19,6 +20,7 @@ useEffect(() => {
      <h2 className="text-center text-xl mt-5">
       The random word is {word}
      </h2>
+     <HungmanPotrait/>
      <Keyboard/>
     </>
   )
