@@ -13,17 +13,17 @@ const Keyboard = () => {
     const [input, setinput] = useState();
     
   return (
-    <div className='relative '>
-      <div className='fixed bottom-10 border-2 border-black w-full h-56 '>
+    <div className=''>
+      <div className=' border-2 border-black w-full h-full '>
         
           {rows.map((row , rowIndex)=>(
-            <div className='flex justify-center' key={rowIndex}>
+            <div className='flex justify-center ' key={rowIndex}>
               {row.map((letter,index )=>{
                 
                 return(
                   <button
                 
-                  className='text-3xl p-3 ' 
+                  className='text-xl p-3 ' 
                   key={index}>
                     {letter}
                   </button>

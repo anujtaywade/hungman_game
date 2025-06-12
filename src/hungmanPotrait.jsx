@@ -1,12 +1,28 @@
 import React from 'react'
 import { Stage,Layer,Line,Circle } from "react-konva";
+
 const HungmanPotrait = () => {
+
+
   return (
-    <div className='relative'>
-      <div className='fixed bottom-50'>
-        <Stage width={300} height={300}>
+    <div className=''>
+      <div className=''>
+        <Stage width={450} height={450}>
             <Layer >
-                    <Line  points={[90,300,350,300]} stroke='black' width={(4)}/>
+                      {/* pole and base */}
+                    <Line  points={[10,250,350,250]} stroke='black' width={(4)} x={[10]} y={[170]}/>
+                    <Line points={[100,400,100,100]} stroke='black'width={(4)} x={[0]} y={[20]}/>
+                    <Line points={[100,200,250,200]} stroke="black" width={(4)} x={[-10]} y={[-40]}/>
+
+                    {/* rope */}
+                    <Line points={[100 ,100,100,50]} stroke="black" strokeWidth={(4)} x={[120]} y={[110]}/>
+
+                    {/* head */}
+                    <Circle x={220} y={225} radius={15} stroke="black" strokeWidth={4} />
+
+                    {/* body */}
+                    <Line points={[100,200,100,280]} stroke="black" strokeWidth={4} x={[120]} y={[40]}/>
+                    
                     
             </Layer>
         </Stage>
