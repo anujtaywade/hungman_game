@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stage,Layer,Line,Circle } from "react-konva";
+import { Stage,Layer,Line,Circle, Arc } from "react-konva";
 
 const HungmanPotrait = () => {
 
@@ -20,8 +20,21 @@ const HungmanPotrait = () => {
                     {/* head */}
                     <Circle x={220} y={225} radius={15} stroke="black" strokeWidth={4} />
 
+                    {/* eyes */}
+                    <Circle x={214} y={222} radius={3} stroke="black" strokeWidth={3}/>
+                    <Circle x={225} y={222} radius={3} stroke={"black"} strokeWidth={3}/>
+
+                    {/* mouth*/}
+                   
+                    <Arc x={220} y={228} innerRadius={5} outerRadius={5} strokeWidth={3} angle={180} rotation={0} stroke="black"/>
+
                     {/* body */}
                     <Line points={[100,200,100,280]} stroke="black" strokeWidth={4} x={[120]} y={[40]}/>
+
+                    {/* arms */}
+                    <Line points={[30,40,70,70]} stroke="black" strokeWidth={4} x={[190]} y={[200]}/>   
+
+                    <Line points={[30,40,-15,70]} stroke="black" strokeWidth={4} x={[190]} y={[200]}/>
                     
                     
             </Layer>
