@@ -29,14 +29,18 @@ const HungmanPotrait = () => {
                     <Arc x={220} y={228} innerRadius={5} outerRadius={5} strokeWidth={3} angle={180} rotation={0} stroke="black"/>
 
                     {/* body */}
-                    <Line points={[100,200,100,280]} stroke="black" strokeWidth={4} x={[120]} y={[40]}/>
+                    <Line points={[100,200,100,280]} stroke="black" strokeWidth={10} x={[120]} y={[40]}/>
 
                     {/* arms */}
                     <Line points={[30,40,70,70]} stroke="black" strokeWidth={4} x={[190]} y={[200]}/>   
 
                     <Line points={[30,40,-15,70]} stroke="black" strokeWidth={4} x={[190]} y={[200]}/>
-                    
-                    
+
+                    {/* legs */}
+                    <Line points={[30,40,70,70]} stroke="black" strokeWidth={4} x={[190]} y={[280]}/>   
+
+                    <Line points={[30,40,-15,70]} stroke="black" strokeWidth={4} x={[190]} y={[280]}/>
+                           
             </Layer>
         </Stage>
       </div>
