@@ -10,8 +10,18 @@ const Keyboard = () => {
       letters.slice(19,26)
     ]
 
-    const [input, setinput] = useState();
+  
+    const [inputText, setinputText] = useState("");
     
+    useEffect(() => {
+      console.log(inputText)
+    }, [inputText]);
+    
+
+    let handleKeyClick=(key)=>{
+      setinputText((prev)=>prev + key)
+      console.log(setinputText)
+    }
   return (
     <div className=''>
       <div className=' border-2 border-black w-full h-full '>
@@ -22,19 +32,24 @@ const Keyboard = () => {
                 
                 return(
                   <button
-                
+                  onClick={()=>handleKeyClick(letter)}
                   className='text-xl p-3 ' 
                   key={index}>
                     {letter}
                   </button>
+                  
                 )
                 
+                
               })}
+            
             </div>
             
           ))}
+          
        
       </div>
+      
     </div>
   )
 }
