@@ -21,7 +21,7 @@ useEffect(() => {
       Hungman game
      </h1>
       <HungmanPotrait/>
-     <h2 className="text-center text-xl mt-5 ">
+     <h2 className={`text-center text-xl mt-5 `} >
       The random word is {word}
      </h2>
 
