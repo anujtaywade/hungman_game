@@ -1,9 +1,10 @@
 import React from 'react'
 
-const CorrectGuess = () => {
+const CorrectGuess = ({word,gussedLetter}) => {
+
   return (
     <div>
-      
+      {word.split('').map}
     </div>
   )
 }
