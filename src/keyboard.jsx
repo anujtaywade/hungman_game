@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useState, useEffect } from "react";
-const Keyboard = ({word,onGuess}) => {
+const Keyboard = ({word,onGuess,hungmanData}) => {
   let letters = Array.from({ length: 26 }, (_, i) =>
     String.fromCharCode(65 + i)
   );
@@ -14,6 +14,7 @@ const Keyboard = ({word,onGuess}) => {
 
   const [inputValue, setinputValue] = useState([]);
   const [inputText, setinputText] = useState("");
+  const [viewPotrait, setviewPotrait] = useState();
 
   let handleChange = (e) => {
     setinputValue(e.target.value);
@@ -26,6 +27,7 @@ const Keyboard = ({word,onGuess}) => {
       onGuess(letter)
     }
   };
+
 
   useEffect(() => {
     console.log(inputText);
@@ -50,6 +52,7 @@ const Keyboard = ({word,onGuess}) => {
               return (
                 <button
                   onClick={() => handleKeyClick(letter)}
+                  onclic
                   disabled={inputValue.includes(letter)}
                   className={`text-xl p-3 ${
                     inputValue.includes(letter)

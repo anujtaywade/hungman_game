@@ -1,7 +1,10 @@
 import React from 'react'
+import Keyboard from './keyboard'
 import { Stage,Layer,Line,Circle, Arc } from "react-konva";
 
 const HungmanPotrait = () => {
+
+
 
 
   return (
@@ -14,7 +17,9 @@ const HungmanPotrait = () => {
                     <Line points={[100,400,100,100]} stroke='black'width={(4)} x={0} y={20}/>
                     <Line points={[100,200,250,200]} stroke="black" width={(4)} x={-10} y={-40}/>
 
-                    {/* rope */}
+                    
+                    <div className=''>
+                      {/* rope */}
                     <Line points={[100 ,100,100,50]} stroke="black" strokeWidth={(4)} x={120} y={110}/>
 
                     {/* head */}
@@ -40,10 +45,13 @@ const HungmanPotrait = () => {
                     <Line points={[30,40,70,70]} stroke="black" strokeWidth={4} x={190} y={280}/>   
 
                     <Line points={[30,40,-15,70]} stroke="black" strokeWidth={4} x={190} y={280}/>
+                    </div>
+                    
                            
             </Layer>
         </Stage>
       </div>
+      
     </div>
   )
 }
