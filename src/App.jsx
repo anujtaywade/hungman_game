@@ -4,7 +4,8 @@ import { useState ,useEffect} from 'react';
 import './App.css'
 import Keyboard from './keyboard'
 import HungmanPotrait from "./hungmanPotrait";
-import CorrectGuess from './correctGuess';
+import GuessedWord from './guessedWord';
+
 
 function App() {
  const [word, setword] = useState('');
@@ -39,7 +40,8 @@ useEffect(() => {
    
     
      <Keyboard word={word} onGuess={handleGuess} />
-     <CorrectGuess word={word} gussedLetter={CorrectGuess}/>
+    <GuessedWord word={word} gussedLetter={CorrectGuess}/>
+     
     </div>
 
     
